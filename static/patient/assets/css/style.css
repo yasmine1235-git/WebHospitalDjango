@@ -1,0 +1,122 @@
+/* Arrière-plan avec une image réelle */
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Nécessaire pour positionner l'overlay */
+}
+
+/* Container avec flou et dimensions réduites */
+.container {
+    backdrop-filter: blur(5px); /* Flou sur le container */
+    border-radius: 12px;
+    padding: 20px; /* Réduit le padding pour un effet plus compact */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    width: 100%;
+    max-width: 350px; /* Limite la largeur du container */
+    height: auto;
+}
+
+/* Titre */
+h2.text-center {
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Formulaire */
+.form-group label {
+    font-size: 1rem; /* Taille du texte réduite pour les labels */
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Champs de saisie réduits pour l'inscription */
+.form-group input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px 12px; /* Moins de padding pour des champs plus petits */
+    font-size: 0.85rem; /* Taille de police réduite */
+    width: 100%; /* Champs prennent toute la largeur disponible */
+    margin-bottom: 15px; /* Espacement plus petit sous chaque champ */
+    transition: border-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Style des champs de saisie lorsqu'ils sont en focus */
+.form-group input:focus {
+    border-color: #4caf50;
+    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+/* Boutons - Nouveau format et couleurs */
+.btn {
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    text-align: center;
+}
+
+/* Bouton primaire - Bleu doux */
+.btn-primary {
+    background-color: #5bc0de;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #31b0d5;
+    transform: scale(1.05);
+}
+
+/* Bouton secondaire - Gris pastel */
+.btn-secondary {
+    background-color: #e7e7e7;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #c6c6c6;
+    transform: scale(1.05);
+}
+
+/* Bouton danger - Vert doux */
+.btn-danger {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Séparation */
+hr.my-4 {
+    border-top: 2px solid #dee2e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    h2.text-center {
+        font-size: 1.5rem;
+    }
+}
